@@ -1,0 +1,94 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2022-07-13T00:12:08.533Z",
+        "before": [
+          {
+            "result": {
+              "duration": 11855508000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.sample.step_definitions.Hooks.start()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "nuffield health scenario",
+        "description": "",
+        "id": "nuffield-heath-feature;nuffield-health-scenario",
+        "after": [
+          {
+            "result": {
+              "duration": 424000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.sample.step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 233422000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user search for nearest gym",
+            "match": {
+              "location": "com.sample.step_definitions.NuffieldStepDefs.the_user_search_for_nearest_gym()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3934135000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user search for \"DE1\" on searchbox",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DE1\"",
+                  "offset": 20
+                }
+              ],
+              "location": "com.sample.step_definitions.NuffieldStepDefs.the_user_search_for_on_searchbox(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError\n\tat org.junit.Assert.fail(Assert.java:87)\n\tat org.junit.Assert.assertTrue(Assert.java:42)\n\tat org.junit.Assert.assertTrue(Assert.java:53)\n\tat com.sample.step_definitions.NuffieldStepDefs.the_first_result_should_be_the_nearest_one(NuffieldStepDefs.java:79)\n\tat ✽.the first result should be the nearest one(file:///Users/mehmet/IdeaProjects/nuffieldTask/src/test/resources/features/nuffield.feature:7)\n",
+              "duration": 15052101000,
+              "status": "failed"
+            },
+            "line": 7,
+            "name": "the first result should be the nearest one",
+            "match": {
+              "location": "com.sample.step_definitions.NuffieldStepDefs.the_first_result_should_be_the_nearest_one()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@nuffield"
+          }
+        ]
+      }
+    ],
+    "name": "nuffield heath feature",
+    "description": "",
+    "id": "nuffield-heath-feature",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/nuffield.feature",
+    "tags": []
+  }
+]
