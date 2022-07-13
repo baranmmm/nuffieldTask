@@ -52,6 +52,7 @@ public class NuffieldStepDefs extends CommonSteps {
         waitForClickablility(googleMapsPage.directionsButton, 15).click();
         List<String> distances = new ArrayList<>();
         for(int i=0;i<nearestGyms.size();i++){
+            waitFor(1);
             waitForVisibility(googleMapsPage.startingPoint,15).clear();
             googleMapsPage.startingPoint.sendKeys(nearestGyms.get(i));
             Actions action = new Actions(newDriver);
@@ -61,6 +62,7 @@ public class NuffieldStepDefs extends CommonSteps {
             distances.add(distanceString);
             waitFor(1);
         }
+
         String[] splittedfirstDistance = distances.get(0).split(" ");
         Double firstDistance = Double.parseDouble(splittedfirstDistance[0]);
 
@@ -77,5 +79,6 @@ public class NuffieldStepDefs extends CommonSteps {
         }
 
         Assert.assertTrue(firstDistance<=secondDistance);
+        newDriver.quit();
     }
 }
